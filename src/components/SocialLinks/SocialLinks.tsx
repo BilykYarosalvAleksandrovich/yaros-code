@@ -28,12 +28,12 @@ const socialData: SocialLink[] = [
   {
     name: "Instagram",
     icon: faInstagram,
-    url: "https://instagram.com/ВАШ_АККАУНТ",
+    url: "https://www.instagram.com/yaroslav.aleksandrovich.bilyk",
   },
   {
     name: "Facebook",
     icon: faFacebookF,
-    url: "https://facebook.com/ВАШ_ПРОФІЛЬ",
+    url: "https://www.facebook.com/yaroslav.aleksandrovich.bilyk",
   },
   {
     name: "Spotify",
