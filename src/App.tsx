@@ -14,7 +14,7 @@ import styles from "./App.module.css";
 // Для Socials Section, який знаходиться тут, нам потрібна Fade
 import { Fade } from "react-awesome-reveal";
 
-function App(): JSX.Element {
+function App(): React.FC {
   // Дані, які можуть легко змінюватися та передаватися в HeroSection
   const latestReleaseData = {
     url: "https://youtube.com/link-to-your-newest-video",

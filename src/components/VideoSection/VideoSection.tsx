@@ -17,7 +17,7 @@ const videoList: VideoItem[] = [
   // Додайте більше відео тут
 ];
 
-export function VideoSection(): JSX.Element {
+export function VideoSection(): React.FC {
   return (
     <section id="videos" className={styles.videoSection}>
       <Fade triggerOnce cascade damping={0.1}>

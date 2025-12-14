@@ -4,6 +4,15 @@ import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 
 // Імпортуємо стилі як об'єкт 'styles'
 import styles from "./SocialLinks.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faSpotify,
+  faYoutube,
+  faInstagram,
+  faFacebookF,
+  faTiktok,
+  faTelegramPlane, // Перевірте, чи ви імпортували всі необхідні
+} from "@fortawesome/free-brands-svg-icons";
 
 // Типізація для об'єктів соціальних мереж
 interface SocialLink {
@@ -26,9 +35,14 @@ const socialData: SocialLink[] = [
     icon: faFacebookF,
     url: "https://facebook.com/ВАШ_ПРОФІЛЬ",
   },
+  {
+    name: "Spotify",
+    icon: faSpotify,
+    url: "https://spotify.com/ВАШ_ПРОФІЛЬ",
+  },
 ];
 
-export function SocialLinks(): JSX.Element {
+export function SocialLinks(): React.FC {
   return (
     // Використовуємо styles.socialContainer для доступу до CSS класу
     <div className={styles.socialContainer}>

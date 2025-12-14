@@ -1,5 +1,5 @@
-import React from 'react';
-import { useState } from "react";
+import React from "react";
+import React, { useState } from "react";
 // Імпортуємо іконки для мобільного меню
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
@@ -14,7 +14,7 @@ const navItems = [
   { name: "Контакти", href: "#socials" },
 ];
 
-export function Header(): JSX.Element {
+export function Header(): React.FC {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
