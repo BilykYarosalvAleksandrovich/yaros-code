@@ -8,6 +8,8 @@ import {
   IconDefinition, // Імпортуємо для типізації іконок
 } from "@fortawesome/free-brands-svg-icons";
 
+import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
+
 // Імпортуємо стилі як об'єкт 'styles'
 import styles from "./SocialLinks.module.css";
 

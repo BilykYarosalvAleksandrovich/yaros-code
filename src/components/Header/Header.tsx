@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 // Імпортуємо іконки для мобільного меню
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import styles from "./Header.module.css";
-import { ThemeToggle } from './ThemeToggle'; // ІМПОРТ КОМПОНЕНТА ПЕРЕМИКАЧА
+import { ThemeToggle } from "./ThemeToggle"; // ІМПОРТ КОМПОНЕНТА ПЕРЕМИКАЧА
 
 // Дані для навігаційного меню
 const navItems = [
@@ -36,7 +36,7 @@ export function Header(): JSX.Element {
         {/* 1. Блок елементів керування (видно на мобільному) */}
         <div className={styles.headerControls}>
           {/* ThemeToggle видно завжди, але стилізується по-різному */}
-          <ThemeToggle /> 
+          <ThemeToggle />
 
           {/* Кнопка Гамбургер (видно лише на мобільних) */}
           <button
@@ -47,7 +47,6 @@ export function Header(): JSX.Element {
             <FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars} />
           </button>
         </div>
-        
 
         {/* 2. Навігаційне меню (Сховано на мобільному, поки не відкрито) */}
         <nav

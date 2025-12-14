@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./VideoSection.module.css";
 import { Fade } from "react-awesome-reveal";
 

@@ -1,11 +1,5 @@
-import React, {
-  createContext,
-  useState,
-  useContext,
-  useEffect,
-  ReactNode,
-} from "react";
-
+import React, { createContext, useState, useContext, useEffect } from "react";
+import type { ReactNode } from "react";
 // 1. Типізація для теми
 type Theme = "light" | "dark";
 
