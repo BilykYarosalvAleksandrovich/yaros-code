@@ -1,0 +1,102 @@
+:root {
+  --color-primary-dark: #1f1f1f;
+  --color-accent: #e62117; 
+}
+
+/* --- Основний контейнер секції --- */
+.heroSection {
+  /* Фонове зображення — ОБОВ'ЯЗКОВО замініть на ваше якісне фото! */
+  background: url('../../assets/img/hero-background.jpg') no-repeat center center/cover;
+  min-height: 80vh; /* Висота: займає 80% висоти вікна перегляду */
+  display: flex;
+  align-items: center; /* Центруємо контент вертикально */
+  justify-content: center; /* Центруємо контент горизонтально */
+  text-align: center;
+  position: relative;
+  color: white; /* Білий текст на темному фоні */
+  z-index: 1;
+}
+
+/* Накладення для затемнення фону та підвищення контрасту тексту */
+.heroSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4); /* Напівпрозорий чорний колір */
+  z-index: 2;
+}
+
+/* Контентний блок */
+.container {
+  position: relative; /* Щоб контент був поверх накладення */
+  z-index: 3;
+  padding: 20px;
+}
+
+.headline {
+  font-size: 2.5em; /* Розмір для мобільних */
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  font-weight: 900;
+}
+
+.tagline {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+/* --- Кнопки та Покликання --- */
+
+.primaryButton {
+  display: inline-block;
+  background: var(--color-accent); /* Акцентний колір (червоний) */
+  color: white;
+  text-decoration: none;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-bottom: 15px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.primaryButton:hover {
+  background: #cc1e15; /* Трохи темніший червоний */
+  transform: translateY(-2px);
+}
+
+.secondaryLink {
+  display: block;
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+  padding: 10px;
+  transition: color 0.3s;
+}
+
+.secondaryLink:hover {
+  color: var(--color-accent);
+}
+
+/* --- Адаптивність (Десктоп) --- */
+@media (min-width: 768px) {
+  .headline {
+      font-size: 4em; /* Збільшуємо розмір на десктопах */
+  }
+
+  .tagline {
+      font-size: 1.5em;
+  }
+  
+  .primaryButton {
+      margin-right: 20px;
+      margin-bottom: 0;
+  }
+  
+  .secondaryLink {
+      display: inline-block; /* Поруч із кнопкою на десктопах */
+  }
+}

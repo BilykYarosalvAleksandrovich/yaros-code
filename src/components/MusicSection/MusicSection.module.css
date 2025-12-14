@@ -1,0 +1,119 @@
+:root {
+  --color-primary-dark: #1f1f1f;
+  --color-accent: #e62117;
+  --color-spotify: #1db954;
+  --color-apple: #fa284b;
+}
+
+/* --- Загальні стилі секції --- */
+.musicSection {
+  padding: 80px 0;
+  text-align: center;
+  background-color: white; /* Світлий фон */
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  font-size: 2.4em;
+  margin-bottom: 40px;
+  color: var(--color-primary-dark);
+}
+
+/* --- Адаптивна Сітка Альбомів (Mobile-First) --- */
+.albumGrid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  ); /* Автоматична сітка */
+  gap: 30px;
+}
+
+.albumItem {
+  text-align: center;
+}
+
+.albumTitle {
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 2px;
+}
+
+.albumYear {
+  font-size: 0.9em;
+  color: #666;
+}
+
+/* --- Обкладинка та Ефект Наведення --- */
+.coverWrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.albumCover {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+/* Накладення посилань */
+.linksOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7); /* Темний напівпрозорий фон */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  opacity: 0; /* За замовчуванням приховано */
+  transition: opacity 0.4s ease;
+}
+
+/* Ефект при наведенні курсору */
+.coverWrapper:hover .albumCover {
+  transform: scale(1.05); /* Збільшення зображення */
+}
+
+.coverWrapper:hover .linksOverlay {
+  opacity: 1; /* Показ посилань */
+}
+
+/* --- Стилі для посилань на стрімінгові платформи --- */
+.streamLink {
+  font-size: 2.5em;
+  color: white;
+  transition: color 0.3s;
+}
+
+.streamLink:hover {
+  transform: scale(1.1);
+}
+
+.streamLink.Spotify:hover {
+  color: var(--color-spotify);
+}
+.streamLink.AppleMusic:hover {
+  color: var(--color-apple);
+}
+.streamLink.YouTubeMusic:hover {
+  color: var(--color-accent);
+}
+
+/* Адаптивність: На мобільних можна не масштабувати обкладинку, щоб уникнути помилок */
+@media (max-width: 767px) {
+  .coverWrapper:hover .albumCover {
+    transform: none;
+  }
+}

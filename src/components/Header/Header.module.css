@@ -1,0 +1,143 @@
+:root {
+  /* Використовуємо CSS-змінні з App.module.css */
+  --color-primary-dark: #1f1f1f;
+  --color-accent: #e62117;
+}
+
+/* --- Загальні стилі та Десктоп --- */
+.mainHeader {
+  background: var(--color-primary-dark);
+  color: white;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerControls {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Простір між перемикачем та гамбургером */
+  z-index: 1001; /* Переконатися, що він над мобільним меню */
+}
+
+.logo {
+  color: white;
+  font-size: 1.6em;
+  font-weight: bold;
+  text-decoration: none;
+  z-index: 1001; /* Щоб логотип був над мобільним меню */
+}
+
+.navMenu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navMenu li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.navLink {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+  padding: 5px 0;
+}
+
+.navLink:hover {
+  color: var(--color-accent);
+}
+
+/* Приховуємо кнопку меню на десктопі */
+.menuToggle {
+  display: none;
+}
+
+/* --- Адаптивність (Mobile) --- */
+@media (max-width: 767px) {
+  .menuToggle {
+    display: block; /* Показуємо кнопку на мобільних */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  .navMenu {
+    /* Основні стилі для закритого мобільного меню */
+    position: absolute;
+    top: 100%; /* Позиціонування під шапкою */
+    left: 0;
+    width: 100%;
+    background: var(--color-primary-dark);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Стилі для відкритого мобільного меню */
+  .menuOpen {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .navMenu ul {
+    display: flex;
+    flex-direction: column; /* Елементи один під одним */
+  }
+
+  .navMenu li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  @media (min-width: 768px) {
+    /* Розміщення меню та ThemeToggle на десктопі */
+    .container {
+      /* Дозволяємо контейнеру контролювати розміщення всіх елементів */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navMenu {
+      /* На десктопі меню займає місце між логотипом та контролами */
+      flex-grow: 1;
+      text-align: right;
+      /* Переконайтеся, що навменю не має position: absolute тут */
+      position: static;
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .headerControls {
+      /* На десктопі ми можемо приховати кнопку гамбургера */
+      display: flex;
+      gap: 20px;
+    }
+
+    /* Приховуємо кнопку гамбургера на десктопі */
+    .menuToggle {
+      display: none;
+    }
+  }
+}

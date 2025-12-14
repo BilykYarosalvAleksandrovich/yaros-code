@@ -1,0 +1,41 @@
+:root {
+  --color-primary-dark: #1f1f1f;
+  --color-light-gray: #ccc;
+}
+
+.mainFooter {
+  background: var(--color-primary-dark);
+  color: var(--color-light-gray);
+  padding: 40px 0;
+  text-align: center;
+  border-top: 3px solid var(--color-accent, #e62117);
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.copyright {
+  margin-top: 20px;
+  font-size: 0.9em;
+}
+
+.footerNav {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footerLink {
+  color: var(--color-light-gray);
+  text-decoration: none;
+  font-size: 0.9em;
+  transition: color 0.3s;
+}
+
+.footerLink:hover {
+  color: white;
+}

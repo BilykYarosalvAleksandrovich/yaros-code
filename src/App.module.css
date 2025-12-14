@@ -1,0 +1,152 @@
+:root {
+  --color-primary-dark: #1f1f1f;
+  --color-accent: #e62117; /* YouTube Red */
+  --padding-desktop: 80px;
+  --padding-mobile: 40px;
+}
+
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background-color: #ffffff;
+  color: var(--color-primary-dark);
+}
+
+/* --- Container та Layout --- */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sectionPadding {
+  padding: var(--padding-mobile) 0;
+  text-align: center;
+}
+
+/* --- Навігація та Header (Mobile-First) --- */
+.mainHeader {
+  background: var(--color-primary-dark);
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  color: white;
+  font-size: 1.5em;
+}
+
+.navMenu {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.navMenu li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.navLink {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navLink:hover {
+  color: var(--color-accent);
+}
+
+/* --- Відео Сітка (Адаптивність) --- */
+.videoGrid {
+  display: grid;
+  grid-template-columns: 1fr; /* Мобільний: 1 колонка */
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 співвідношення */
+  height: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.aboutContent {
+  display: flex;
+  flex-direction: column; /* За замовчуванням: зображення під текстом (для мобільних) */
+  gap: 30px;
+  text-align: left;
+  margin-top: 30px;
+}
+
+.aboutImage img {
+  width: 100%;
+  max-width: 400px; /* Обмеження ширини фото */
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  margin: 0 auto;
+  display: block;
+}
+
+/* --- Media Query для Десктопів (починаючи з 768px) --- */
+@media (min-width: 768px) {
+  /* Навігація для десктопів */
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .aboutContent {
+    flex-direction: row; /* На десктопах: текст поруч із зображенням */
+    align-items: center;
+    /* Можна використовувати: 
+       - 'row' та 'row-reverse' для чергування: 
+       - flex-direction: row-reverse;
+    */
+  }
+
+  .aboutText {
+    flex: 2; /* Текст займає більше місця */
+    padding-right: 30px;
+  }
+
+  .aboutImage {
+    flex: 1; /* Зображення займає менше місця */
+  }
+
+  .navMenu {
+    margin-top: 0;
+  }
+
+  /* Відео Сітка для Десктопів */
+  .videoGrid {
+    grid-template-columns: repeat(2, 1fr); /* 2 колонки */
+  }
+
+  .sectionPadding {
+    padding: var(--padding-desktop) 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .videoGrid {
+    grid-template-columns: repeat(3, 1fr); /* 3 колонки на великих екранах */
+  }
+}

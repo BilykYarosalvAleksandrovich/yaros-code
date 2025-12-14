@@ -1,0 +1,84 @@
+:root {
+  --color-primary-dark: #1f1f1f;
+  --color-accent: #e62117;
+}
+
+/* --- Загальні стилі секції --- */
+.aboutSection {
+  padding: 60px 0; /* Відступ */
+  background-color: #f9f9f9; /* Легкий фон для контрасту */
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sectionTitle {
+  font-size: 2.2em;
+  margin-bottom: 30px;
+  color: var(--color-primary-dark);
+}
+
+/* --- Адаптивний контент (Mobile-First) --- */
+.aboutContent {
+  display: flex;
+  flex-direction: column; /* На мобільних: стовпчик */
+  gap: 30px;
+  text-align: left;
+  margin-top: 30px;
+}
+
+.paragraph {
+  margin-bottom: 15px;
+  line-height: 1.7;
+}
+
+.profilePhoto {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  margin: 0 auto;
+  display: block;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.readMoreLink {
+  display: inline-block;
+  color: var(--color-accent);
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 15px;
+  transition: color 0.3s;
+}
+
+.readMoreLink:hover {
+  color: var(--color-primary-dark);
+}
+
+/* --- Media Query для Десктопів (768px+) --- */
+@media (min-width: 768px) {
+  .aboutContent {
+    flex-direction: row; /* На десктопах: рядок */
+    align-items: flex-start; /* Вирівнювання по верхньому краю */
+  }
+
+  .aboutText {
+    flex: 2;
+    padding-right: 40px;
+    order: 1; /* Текст першим */
+  }
+
+  .aboutImage {
+    flex: 1;
+    order: 2; /* Зображення другим */
+  }
+
+  /* Додаємо опцію для чергування: Зображення ліворуч, текст праворуч */
+  /* Ви можете створити окремий клас, якщо хочете чергувати макет на інших сторінках */
+  /* .aboutContent.reversed { flex-direction: row-reverse; } */
+}

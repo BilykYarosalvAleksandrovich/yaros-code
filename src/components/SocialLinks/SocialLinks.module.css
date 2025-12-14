@@ -1,0 +1,26 @@
+.socialContainer {
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* Відстань між іконками */
+  padding: 20px 0;
+}
+
+/* Стилі для кожної окремої іконки/посилання */
+.socialIcon {
+  font-size: 2.5em; 
+  color: var(--color-primary-dark, #333); /* Використання CSS змінних */
+  transition: color 0.3s ease, transform 0.2s;
+  text-decoration: none;
+}
+
+.socialIcon:hover {
+  color: var(--color-accent, #e62117); 
+  transform: translateY(-5px); /* Невеликий анімований ефект */
+}
+
+/* Адаптивність */
+@media (min-width: 768px) {
+  .socialIcon {
+      font-size: 3em;
+  }
+}
