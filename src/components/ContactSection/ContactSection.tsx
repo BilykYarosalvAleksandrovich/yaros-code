@@ -1,3 +1,4 @@
+import React from "react";
 import styles from "./ContactSection.module.css";
 import { Fade } from "react-awesome-reveal";
 

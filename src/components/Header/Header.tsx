@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from "react";
 // Імпортуємо іконки для мобільного меню
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

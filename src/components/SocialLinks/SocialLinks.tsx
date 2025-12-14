@@ -1,12 +1,4 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faYoutube,
-  faTelegramPlane,
-  faTiktok,
-  faInstagram,
-  faFacebookF,
-  IconDefinition, // Імпортуємо для типізації іконок
-} from "@fortawesome/free-brands-svg-icons";
+import React from "react";
 
 import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 
