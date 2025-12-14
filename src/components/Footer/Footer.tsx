@@ -3,7 +3,7 @@ import { SocialLinks } from "../SocialLinks/SocialLinks";
 
 import styles from "./Footer.module.css";
 
-export function Footer(): JSX.Element {
+export function Footer(): React.ReactElement {
   const currentYear = new Date().getFullYear();
 
   return (

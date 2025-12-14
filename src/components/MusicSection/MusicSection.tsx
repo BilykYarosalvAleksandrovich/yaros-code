@@ -72,7 +72,7 @@ const getPlatformIcon = (platform: StreamLink["platform"]) => {
   }
 };
 
-export function MusicSection(): React.FC {
+export function MusicSection(): React.ReactElement{
   return (
     <section id="music" className={styles.musicSection}>
       <Fade triggerOnce duration={700}>

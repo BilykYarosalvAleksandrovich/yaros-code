@@ -42,7 +42,7 @@ const socialData: SocialLink[] = [
   },
 ];
 
-export function SocialLinks(): React.FC {
+export function SocialLinks(): React.ReactElement {
   return (
     // Використовуємо styles.socialContainer для доступу до CSS класу
     <div className={styles.socialContainer}>

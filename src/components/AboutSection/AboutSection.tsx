@@ -2,7 +2,7 @@ import React from "react";
 import { Fade } from "react-awesome-reveal"; // ІМПОРТ
 import styles from "./AboutSection.module.css";
 
-export function AboutSection(): JSX.Element {
+export function AboutSection(): React.ReactElement {
   return (
     <section id="about" className={styles.aboutSection}>
       {/* Fade, triggerOnce та cascade */}

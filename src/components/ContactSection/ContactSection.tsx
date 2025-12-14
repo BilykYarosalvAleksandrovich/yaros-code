@@ -26,7 +26,7 @@ const contacts: ContactItem[] = [
   },
 ];
 
-export function ContactSection(): JSX.Element {
+export function ContactSection(): React.ReactElement{
   return (
     <section id="contact" className={styles.contactSection}>
       <Fade triggerOnce duration={600}>

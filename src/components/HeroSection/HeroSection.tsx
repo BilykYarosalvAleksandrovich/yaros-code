@@ -10,7 +10,7 @@ interface HeroProps {
 export function HeroSection({
   latestReleaseUrl,
   latestReleaseTitle,
-}: HeroProps): React.FC {
+}: HeroProps): React.ReactElement {
   return (
     <section id="hero" className={styles.heroSection}>
       <Fade duration={1200}>
