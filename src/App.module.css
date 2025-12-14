@@ -1,6 +1,4 @@
 :root {
-  --color-primary-dark: #1f1f1f;
-  --color-accent: #e62117; /* YouTube Red */
   --padding-desktop: 80px;
   --padding-mobile: 40px;
 }
@@ -8,8 +6,6 @@
 body {
   margin: 0;
   font-family: "Helvetica Neue", Arial, sans-serif;
-  background-color: #ffffff;
-  color: var(--color-primary-dark);
 }
 
 /* --- Container та Layout --- */
@@ -26,7 +22,7 @@ body {
 
 /* --- Навігація та Header (Mobile-First) --- */
 .mainHeader {
-  background: var(--color-primary-dark);
+  background: var(--color-header-bg);
   padding: 10px 0;
   position: sticky;
   top: 0;
@@ -34,7 +30,7 @@ body {
 }
 
 .logo {
-  color: white;
+  color: var(--color-header-text);
   font-size: 1.5em;
 }
 
@@ -51,7 +47,7 @@ body {
 }
 
 .navLink {
-  color: white;
+  color: var(--color-header-text);
   text-decoration: none;
   font-weight: bold;
 }

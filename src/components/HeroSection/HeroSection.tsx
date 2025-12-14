@@ -18,9 +18,9 @@ export function HeroSection({
         {/* Застосовуємо плавне з'явлення до всієї секції */}
         <div className={styles.container}>
           <h2 className={styles.headline}>
-            Музика, що резонує.
+            Музика, що надихає.
             <br />
-            Співак та Композитор.
+            Composer and Musician.
           </h2>
 
           <p className={styles.tagline}>

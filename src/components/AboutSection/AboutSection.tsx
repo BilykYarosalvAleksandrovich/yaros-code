@@ -28,7 +28,7 @@ export function AboutSection(): React.ReactElement {
             <div className={styles.aboutImage}>
               {/* Зображення з'явиться одразу після тексту */}
               <img
-                src="./images/for-about.jpg"
+                src="/public/images/for-about.jpg"
                 alt="Портрет співака та композитора"
                 className={styles.profilePhoto}
               />
