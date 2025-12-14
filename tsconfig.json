@@ -2,9 +2,10 @@
   "compilerOptions": {
     "target": "ES2020",
     "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOMAIT"],
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
+    "composite": true,
 
     /* Налаштування React/JSX */
     "jsx": "react-jsx", // <-- ВИКОРИСТОВУЙТЕ "react-jsx"
