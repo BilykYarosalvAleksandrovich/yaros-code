@@ -20,7 +20,7 @@ export function Footer(): React.ReactElement {
           </a>
         </div>
         <p className={styles.copyright}>
-          &copy; {currentYear} YAROS Code. All rights reserved. 2025.
+          &copy; {currentYear} YAROS Code. All rights reserved.
         </p>
       </div>
     </footer>

@@ -1,0 +1,37 @@
+/* src/pages/BioPage.module.css */
+
+.backButton {
+  /* 1. Основне оформлення */
+  display: inline-block;
+  margin-top: 30px;
+  padding: 10px 20px;
+
+  /* 2. Кольори */
+  background-color: var(--color-accent); /* Червоний колір з вашої теми */
+  color: floralwhite;
+
+  /* 3. Шрифти та оформлення */
+  text-decoration: none; /* Видалити підкреслення */
+  font-weight: bold;
+  border-radius: 6px;
+
+  /* 4. Ефект переходу */
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+/* 5. Стилі при наведенні (Hover) */
+.backButton:hover {
+  background-color: color-mix(
+    in srgb,
+    var(--color-accent) 85%,
+    black
+  ); /* Трохи темніший червоний */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 6. Стилі при фокусі (Focus) */
+.backButton:focus {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  transform: translateY(-1px); /* Невеликий ефект підняття */
+}

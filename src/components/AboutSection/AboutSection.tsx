@@ -1,6 +1,7 @@
 import React from "react";
 import { Fade } from "react-awesome-reveal"; // ІМПОРТ
 import styles from "./AboutSection.module.css";
+import { Link } from "react-router-dom";
 
 export function AboutSection(): React.ReactElement {
   return (
@@ -42,15 +43,17 @@ export function AboutSection(): React.ReactElement {
                 Слухайте. Відчувайте. Досягайте.
               </p>
 
-              <a href="/bio" className={styles.readMoreLink}>
+              <Link to="/bio" className={styles.readMoreLink}>
+                {" "}
+                {/* ВИКОРИСТОВУЄМО Link to="..." */}
                 Читати повну біографію →
-              </a>
+              </Link>
             </div>
 
             <div className={styles.aboutImage}>
               {/* Зображення з'явиться одразу після тексту */}
               <img
-                src="/public/images/for-about.jpg"
+                src="images/for-about.jpg"
                 alt="Портрет співака та композитора"
                 className={styles.profilePhoto}
               />
