@@ -7,7 +7,7 @@
   padding: 10px 20px;
 
   /* 2. Кольори */
-  background-color: var(--color-accent); /* Червоний колір з вашої теми */
+  background-color: #e62117;
   color: floralwhite;
 
   /* 3. Шрифти та оформлення */
@@ -17,6 +17,10 @@
 
   /* 4. Ефект переходу */
   transition: background-color 0.2s, transform 0.1s;
+}
+
+:global(body[data-theme="dark"]) .backButton {
+  background-color: #ff4500;
 }
 
 /* 5. Стилі при наведенні (Hover) */

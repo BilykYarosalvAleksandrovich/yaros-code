@@ -3,6 +3,11 @@
   --color-accent: #e62117;
 }
 
+/* Кнопка в темній темі (можна зробити яскравішою) */
+:global(body[data-theme="dark"]) .readMoreLink {
+  background-color: #ff4500; /* Більш помаранчевий для контрасту */
+}
+
 /* --- Загальні стилі секції --- */
 .aboutSection {
   padding: 60px 0; /* Відступ */
@@ -47,21 +52,57 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.readMoreLink {
-  display: inline-block;
-  color: var(--color-accent);
-  text-decoration: none;
-  font-weight: bold;
-  margin-top: 15px;
-  transition: color 0.3s;
+.buttonWrapper {
+  margin-top: 30px;
+  text-align: center; /* На мобільних кнопка по центру */
 }
 
+.readMoreLink {
+  display: inline-block;
+  /* Робимо кнопку трохи більшою на мобільних для зручності (Touch Target) */
+  padding: 14px 32px;
+
+  background-color: #e62117;
+  color: floralwhite;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem; /* Трішки більший шрифт для мобілки */
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  border: none;
+}
+
+/* Ефект при наведенні (Hover) */
 .readMoreLink:hover {
-  color: var(--color-primary-dark);
+  background-color: #cc1d14;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(230, 33, 23, 0.3);
+}
+
+/* Ефект при натисканні (Active) */
+.readMoreLink:active {
+  transform: translateY(0);
+}
+
+/* Стиль для фокусу (Focus) — важливо для доступності */
+.readMoreLink:focus {
+  outline: none;
+  border-color: var(--color-header-text);
+  box-shadow: 0 0 0 3px rgba(230, 33, 23, 0.5);
 }
 
 /* --- Media Query для Десктопів (768px+) --- */
 @media (min-width: 768px) {
+  .buttonWrapper {
+    text-align: left;
+  }
+
+  .readMoreLink {
+    padding: 12px 24px; /* Повертаємо стандартний розмір */
+    font-size: 1rem;
+  }
   .aboutContent {
     flex-direction: row; /* На десктопах: рядок */
     align-items: flex-start; /* Вирівнювання по верхньому краю */
@@ -77,8 +118,12 @@
     flex: 1;
     order: 2; /* Зображення другим */
   }
+}
 
-  /* Додаємо опцію для чергування: Зображення ліворуч, текст праворуч */
-  /* Ви можете створити окремий клас, якщо хочете чергувати макет на інших сторінках */
-  /* .aboutContent.reversed { flex-direction: row-reverse; } */
+@media (max-width: 375px) {
+  .readMoreLink {
+    display: block; /* Кнопка на всю ширину */
+    text-align: center;
+    padding: 14px 10px;
+  }
 }

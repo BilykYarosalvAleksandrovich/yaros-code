@@ -1,41 +1,35 @@
-:root {
-  --color-primary-dark: #1f1f1f;
-  --color-light-gray: #ccc;
-}
-
+/* Footer.module.css */
 .mainFooter {
-  background: var(--color-primary-dark);
-  color: var(--color-light-gray);
+  background-color: #1f1f1f; /* Темний футер у світлій темі */
+  color: #ffffff;
   padding: 40px 0;
   text-align: center;
-  border-top: 3px solid var(--color-accent, #e62117);
 }
 
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
+/* Футер у темній темі (ще темніший) */
+:global(body[data-theme="dark"]) .mainFooter {
+  background-color: #000000;
 }
 
-.copyright {
-  margin-top: 20px;
-  font-size: 0.9em;
+.socialWrapper :global(a) {
+  color: #ffffff !important; /* Білі іконки завжди */
+  opacity: 0.8;
+  margin: 0 12px;
+  font-size: 1.6rem;
+  transition: 0.3s;
 }
 
-.footerNav {
-  margin: 20px 0;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+.socialWrapper :global(a:hover) {
+  color: #e62117 !important; /* Червоний при наведенні */
+  opacity: 1;
 }
 
 .footerLink {
-  color: var(--color-light-gray);
+  color: #ffffff;
+  opacity: 0.6;
   text-decoration: none;
-  font-size: 0.9em;
-  transition: color 0.3s;
 }
 
-.footerLink:hover {
-  color: white;
+:global(body[data-theme="dark"]) .footerLink {
+  color: #bbbbbb;
 }

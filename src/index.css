@@ -1,32 +1,13 @@
-/* --- Скидання та Глобальні Стилі --- */
-/* ... (існуючий body та інші базові стилі) ... */
-
-/* --- Визначення CSS Variables (Змінні) --- */
-/* Світла Тема (За замовчуванням) */
-:root, body[data-theme='light'] {
-  --color-background-primary: #ffffff;
-  --color-background-secondary: #f4f4f4;
-  --color-text-primary: #1f1f1f;
-  --color-text-secondary: #555555;
-  --color-header-bg: #1f1f1f;
-  --color-header-text: #ffffff;
-  --color-accent: #e62117;
-}
-
-/* Темна Тема */
-body[data-theme='dark'] {
-  --color-background-primary: #121212; /* Дуже темний фон */
-  --color-background-secondary: #1f1f1f; /* Секції або карти */
-  --color-text-primary: #ffffff;
-  --color-text-secondary: #bbbbbb;
-  --color-header-bg: #000000;
-  --color-header-text: #ffffff;
-  --color-accent: #ff4500; /* Червоний/Помаранчевий, щоб краще виглядав на темному */
-}
-
-/* --- Застосування Змінних до Body --- */
+/* index.css */
 body {
-  background-color: var(--color-background-primary);
-  color: var(--color-text-primary);
-  transition: background-color 0.3s, color 0.3s; /* Плавний перехід */
+  margin: 0;
+  background-color: #ffffff; /* Світлий фон за замовчуванням */
+  color: #1f1f1f;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Коли увімкнена нічна тема */
+body[data-theme='dark'] {
+  background-color: #121212; /* Темний фон */
+  color: #ffffff;
 }

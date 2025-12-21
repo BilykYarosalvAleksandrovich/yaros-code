@@ -43,11 +43,11 @@ export function AboutSection(): React.ReactElement {
                 Слухайте. Відчувайте. Досягайте.
               </p>
 
-              <Link to="/bio" className={styles.readMoreLink}>
-                {" "}
-                {/* ВИКОРИСТОВУЄМО Link to="..." */}
-                Читати повну біографію →
-              </Link>
+              <div className={styles.buttonWrapper}>
+                <Link to="/bio" className={styles.readMoreLink}>
+                  Читати повну біографію →
+                </Link>
+              </div>
             </div>
 
             <div className={styles.aboutImage}>

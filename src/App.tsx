@@ -10,6 +10,7 @@ import { BioPage } from "./pages/BioPage"; // Сторінка повної бі
 // Імпорт спільних компонентів (відображаються на всіх сторінках)
 import { Header } from "./components/Header/Header";
 import { Footer } from "./components/Footer/Footer";
+import { ContactPage } from "./pages/ContactPage"; // Імпортуйте нову сторінку
 
 // Інші імпорти компонентів секцій тут більше не потрібні!
 // (HeroSection, AboutSection, MusicSection, VideoSection, ContactSection, SocialLinks)
@@ -29,6 +30,8 @@ function App(): React.ReactElement {
 
         {/* '/bio' відображає сторінку повної біографії */}
         <Route path="/bio" element={<BioPage />} />
+
+        <Route path="/contacts" element={<ContactPage />} />
       </Routes>
 
       {/* Підвал (Спільний для всіх сторінок) */}

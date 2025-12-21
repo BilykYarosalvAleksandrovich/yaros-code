@@ -12,33 +12,26 @@ interface ContactItem {
 // Дані контактів (ОБОВ'ЯЗКОВО ЗАМІНІТЬ)
 const contacts: ContactItem[] = [
   {
-    role: "Менеджер з Букінгу та Концертів",
-    email: "booking@yourname.com",
-    phone: "+380 XX XXX XX XX",
-  },
-  {
     role: "Контакти для Преси та ЗМІ (PR)",
-    email: "press@yourname.com",
+    email: "bilyk.yaroslav.aleksandrovich@gmail.com",
   },
   {
     role: "Загальні Питання та Фан-пошта",
-    email: "info@yourname.com",
+    email: "rcpogenerationofstrong@gmail.com",
   },
 ];
 
-export function ContactSection(): React.ReactElement{
+export function ContactSection(): React.ReactElement {
   return (
     <section id="contact" className={styles.contactSection}>
       <Fade triggerOnce duration={600}>
         <div className={styles.container}>
-          <h3 className={styles.sectionTitle}>Зв'яжіться зі мною</h3>
-
           <div className={styles.contentWrapper}>
             {/* 1. Блок контактної інформації */}
             <div className={styles.contactInfo}>
               <p className={styles.leadText}>
-                Для співпраці, організації концертів або питань щодо преси, будь
-                ласка, скористайтеся відповідними контактами нижче.
+                Для співпраці, організаційних питань & щодо преси, будь ласка,
+                скористайтеся відповідними контактами нижче.
               </p>
 
               {contacts.map((item) => (
@@ -72,7 +65,7 @@ export function ContactSection(): React.ReactElement{
 
             {/* 2. Блок форми зворотного зв'язку */}
             <div className={styles.contactFormWrapper}>
-              <h4 className={styles.formTitle}>Напишіть нам напряму</h4>
+              <h4 className={styles.formTitle}>Напишіть мені напряму</h4>
 
               {/* !!! Важливо: action="/submit-form" вимагає налаштування бекенду. 
                             Якщо ви використовуєте Formspree або подібний сервіс, замініть action. 
